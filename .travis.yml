@@ -1,0 +1,15 @@
+language: objective-c
+osx_image: xcode7.3
+cache: cocoapods
+
+before_install:
+  - brew install swiftlint
+  - gem install xcpretty
+  - gem install cocoapods
+
+install:
+  - pod install
+
+script:
+  - swiftlint
+  - set -o pipefail && xcodebuild -workspace MaxibonKataIOS.xcworkspace -scheme 'MaxibonKataIOS' -destination 'platform=iOS Simulator,name=iPhone 6s Plus' build test CODE_SIGN_IDENTITY=- | xcpretty -c
