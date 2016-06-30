@@ -21,7 +21,8 @@ class DeveloperSpec: XCTestCase {
             return developer.numberOfMaxibonsToGet >= 0
         }
 
-        property("The number of maxibons is asigned if is positive or zero") <- forAll { (positiveNumber: NonNegative<Int>) in
+        property("The number of maxibons is asigned if is positive or zero")
+            <- forAll { (positiveNumber: NonNegative<Int>) in
             let numberOfMaxibons = positiveNumber.getNonNegative
             let developer = Developer(name: self.anyName, numberOfMaxibonsToGet: numberOfMaxibons)
             return developer.numberOfMaxibonsToGet == numberOfMaxibons

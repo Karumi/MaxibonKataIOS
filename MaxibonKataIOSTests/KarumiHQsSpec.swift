@@ -13,54 +13,81 @@ import SwiftCheck
 
 class KarumiHQsSpec: XCTestCase {
 
+    func testKarumiHQsStartsTheWeekWithTenMaxibons() {
+        XCTAssertEqual(10, KarumiHQs().maxibonsLeft)
+    }
+
     func testAll() {
 
-        property("Karumi HQs starts every week with 10 maxibons") <- forAll { (karumiHQs: KarumiHQs) in
-            return KarumiHQs().maxibonsLeft == 10
-        }.once
-
-        property("The number of maxibons left can not be negative")
-            <- forAll { (karumiHQs: KarumiHQs, developer: Developer) in
+        property("The number of maxibons left can not lower than two")
+            <- forAll { (developer: Developer) in
+            let karumiHQs = KarumiHQs()
             karumiHQs.openFridge(developer)
-            return karumiHQs.maxibonsLeft >= 0
+            return karumiHQs.maxibonsLeft > 2
         }
 
         property("If there are two or less maxibons pending after opening the fridge Karumi automatically buys 10 more")
-            <- forAll { (karumiHQs: KarumiHQs, developer: Developer) in
+            <- forAll(Developer.arbitraryHungry) { (developer: Developer) in
+                let karumiHQs = KarumiHQs()
                 let initialMaxibons = karumiHQs.maxibonsLeft
-                return initialMaxibons - developer.numberOfMaxibonsToGet <= 2 ==> {
-                    let numOfMaxibons = developer.numberOfMaxibonsToGet
-                    let expectedMaxibons = self.maxibonsAfterOpeningTheFridge(initialMaxibons, numOfMaxibons)
-                    karumiHQs.openFridge(developer)
-                    return karumiHQs.maxibonsLeft == expectedMaxibons
-                }
+                let numOfMaxibons = developer.numberOfMaxibonsToGet
+                let expectedMaxibons = self.maxibonsAfterOpeningTheFridge(initialMaxibons, numOfMaxibons)
+                karumiHQs.openFridge(developer)
+                return karumiHQs.maxibonsLeft == expectedMaxibons
         }
 
-        let chat = MockChat()
-        let karumiHQsGenerator = KarumiHQs.create(chat)
-        let developerGenerator = Developer.arbitrary
-
         property("If there are two or less maxibons after opening the fridge the developer sends a message to buy more")
-            <- forAll(karumiHQsGenerator, developerGenerator) { (karumiHQs: KarumiHQs, developer: Developer) in
-                let initialMaxibons = karumiHQs.maxibonsLeft
-                return initialMaxibons - developer.numberOfMaxibonsToGet <= 2 ==> {
-                    karumiHQs.openFridge(developer)
-                    let expectedResult = chat.messageSent == "Hi guys, I'm \(developer). We need more maxibons!"
-                    chat.messageSent = nil
-                    return expectedResult
-                }
+            <- forAll(Developer.arbitraryHungry) { (developer: Developer) in
+                let chat = MockChat()
+                let karumiHQs = KarumiHQs(chat: chat)
+                karumiHQs.openFridge(developer)
+                let expectedResult = chat.messageSent == "Hi guys, I'm \(developer). We need more maxibons!"
+                chat.messageSent = nil
+                return expectedResult
+
         }
 
         property("If there are more than two maxibons after opening the fridge the developer does not send any message")
-            <- forAll(karumiHQsGenerator, developerGenerator) { (karumiHQs: KarumiHQs, developer: Developer) in
-                let initialMaxibons = karumiHQs.maxibonsLeft
-                return initialMaxibons - developer.numberOfMaxibonsToGet > 2 ==> {
-                    karumiHQs.openFridge(developer)
-                    let expectedResult = chat.messageSent == nil
-                    chat.messageSent = nil
-                    return expectedResult
-                }
+            <- forAll(Developer.arbitraryNotSoHungry) { (developer: Developer) in
+                let chat = MockChat()
+                let karumiHQs = KarumiHQs(chat: chat)
+                karumiHQs.openFridge(developer)
+                let expectedResult = chat.messageSent == nil
+                chat.messageSent = nil
+                return expectedResult
         }
+
+        property("If some Karumies go to the kitchen the number of maxibons left can't be lower than 2")
+            <- forAll { (developers: ArrayOf<Developer>) in
+                let karumiHQs = KarumiHQs()
+                karumiHQs.openFridge(developers.getArray)
+                return karumiHQs.maxibonsLeft > 2
+        }
+
+        property("If some Karumies go to the kitchen the number of maxibons left has to be correct")
+            <- forAll { (developers: ArrayOf<Developer>) in
+                let karumiHQs = KarumiHQs()
+                let initialMaxibons = karumiHQs.maxibonsLeft
+                let karumies = developers.getArray
+                karumiHQs.openFridge(karumies)
+                let expectedMaxibons = self.calculateMaxibonsLeft(initialMaxibons, developers: karumies)
+                return karumiHQs.maxibonsLeft == expectedMaxibons
+        }
+
+    }
+
+    private func calculateMaxibonsLeft(initialMaxibons: Int, developers: [Developer]) -> Int {
+        var maxibonsLeft = initialMaxibons
+        developers.forEach { developer in
+            maxibonsLeft -= developer.numberOfMaxibonsToGet
+            if maxibonsLeft < 0 {
+                maxibonsLeft = 0
+            }
+            if maxibonsLeft <= 2 {
+                maxibonsLeft += 10
+            }
+        }
+        return maxibonsLeft
     }
 
     private func maxibonsAfterOpeningTheFridge(initialMaxibons: Int, _ maxibonsToGet: Int) -> Int {

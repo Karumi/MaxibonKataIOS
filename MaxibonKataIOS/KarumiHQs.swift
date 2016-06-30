@@ -28,10 +28,16 @@ public final class KarumiHQs {
     }
 
     public func openFridge(developer: Developer) {
-        grabMaxibons(developer)
-        if shouldBuyMoreMaxibons {
-            notifyWeShouldBuyMaxibons(developer)
-            buyMoreMaxibons()
+        openFridge([developer])
+    }
+
+    public func openFridge(developers: [Developer]) {
+        developers.forEach { developer in
+            grabMaxibons(developer)
+            if shouldBuyMoreMaxibons {
+                notifyWeShouldBuyMaxibons(developer)
+                buyMoreMaxibons()
+            }
         }
     }
 
