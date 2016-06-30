@@ -25,7 +25,7 @@ class KarumiHQsSpec: XCTestCase {
             return karumiHQs.maxibonsLeft >= 0
         }
 
-        property("If there are two or less maxibons peding after opening the fridge Karumi automatically buys 10 more")
+        property("If there are two or less maxibons pending after opening the fridge Karumi automatically buys 10 more")
             <- forAll { (karumiHQs: KarumiHQs, developer: Developer) in
                 let initialMaxibons = karumiHQs.maxibonsLeft
                 return initialMaxibons - developer.numberOfMaxibonsToGet <= 2 ==> {
