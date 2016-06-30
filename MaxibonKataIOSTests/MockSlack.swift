@@ -9,8 +9,7 @@
 import Foundation
 @testable import MaxibonKataIOS
 
-class MockChat
-: Chat {
+class MockChat: Chat {
 
     var messageSent: String? = nil
 

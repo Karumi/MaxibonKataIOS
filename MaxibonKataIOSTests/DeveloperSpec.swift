@@ -17,8 +17,7 @@ class DeveloperSpec: XCTestCase {
     private let anyNumberOfMaxibonsToGet = 11
 
     func testAll() {
-        property("Number of maxibons to consume can not be negative") <- forAll { (numOfMaxibons: Int) in
-            let developer = Developer(name: self.anyName, numberOfMaxibonsToGet: numOfMaxibons)
+        property("Number of maxibons to consume can not be negative") <- forAll { (developer: Developer) in
             return developer.numberOfMaxibonsToGet >= 0
         }
 

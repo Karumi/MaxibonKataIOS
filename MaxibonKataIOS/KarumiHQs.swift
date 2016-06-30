@@ -30,12 +30,12 @@ public final class KarumiHQs {
     public func openFridge(developer: Developer) {
         grabMaxibons(developer)
         if shouldBuyMoreMaxibons {
-            notifyWeShouldByMaxibons(developer)
+            notifyWeShouldBuyMaxibons(developer)
             buyMoreMaxibons()
         }
     }
 
-    private func notifyWeShouldByMaxibons(developer: Developer) {
+    private func notifyWeShouldBuyMaxibons(developer: Developer) {
         let message = "Hi guys, I'm \(developer). We need more maxibons!"
         chat.sendMessage(message)
     }
