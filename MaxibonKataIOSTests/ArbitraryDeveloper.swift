@@ -13,9 +13,9 @@ import SwiftCheck
 extension Developer: Arbitrary {
 
     public static var arbitrary: Gen<Developer> {
-        return Int.arbitrary.map {
+        return NonNegative<Int>.arbitrary.map {
             let name = String.arbitrary.generate
-            return Developer(name: name, numberOfMaxibonsToGet: $0)
+            return Developer(name: name, numberOfMaxibonsToGet: $0.getNonNegative)
         }
     }
 
