@@ -19,7 +19,7 @@ class KarumiHQsSpec: XCTestCase {
 
     func testAll() {
 
-        property("The number of maxibons left can not lower than two")
+        property("The number of maxibons left can not be lower than two")
             <- forAll { (developer: Developer) in
             let karumiHQs = KarumiHQs()
             karumiHQs.openFridge(developer)
