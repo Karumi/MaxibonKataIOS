@@ -16,8 +16,6 @@
 		EBC26D151D24415F00838900 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC26D131D24415F00838900 /* LaunchScreen.storyboard */; };
 		EBC26D2D1D24422A00838900 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC26D2B1D24422A00838900 /* Developer.swift */; };
 		EBC26D2E1D24422A00838900 /* KarumiHQs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC26D2C1D24422A00838900 /* KarumiHQs.swift */; };
-		EBC26D301D2442B100838900 /* KarumiHQsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC26D2F1D2442B100838900 /* KarumiHQsSpec.swift */; };
-		EBCD24241D24488C0007923F /* DeveloperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCD24231D24488C0007923F /* DeveloperSpec.swift */; };
 		EBCD24261D244F210007923F /* ArbitraryDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCD24251D244F210007923F /* ArbitraryDeveloper.swift */; };
 		EBCD24291D2457380007923F /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCD24281D2457380007923F /* Chat.swift */; };
 		EBCD242B1D24575F0007923F /* Slack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCD242A1D24575F0007923F /* Slack.swift */; };
@@ -51,8 +49,6 @@
 		EBC26D211D24415F00838900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBC26D2B1D24422A00838900 /* Developer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
 		EBC26D2C1D24422A00838900 /* KarumiHQs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarumiHQs.swift; sourceTree = "<group>"; };
-		EBC26D2F1D2442B100838900 /* KarumiHQsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarumiHQsSpec.swift; sourceTree = "<group>"; };
-		EBCD24231D24488C0007923F /* DeveloperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperSpec.swift; sourceTree = "<group>"; };
 		EBCD24251D244F210007923F /* ArbitraryDeveloper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArbitraryDeveloper.swift; sourceTree = "<group>"; };
 		EBCD24281D2457380007923F /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		EBCD242A1D24575F0007923F /* Slack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slack.swift; sourceTree = "<group>"; };
@@ -137,8 +133,6 @@
 		EBC26D1E1D24415F00838900 /* MaxibonKataIOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				EBC26D2F1D2442B100838900 /* KarumiHQsSpec.swift */,
-				EBCD24231D24488C0007923F /* DeveloperSpec.swift */,
 				EBCD242C1D24578C0007923F /* Test Doubles */,
 				EBC26D311D24446700838900 /* Generators */,
 				EBC26D211D24415F00838900 /* Info.plist */,
@@ -396,8 +390,6 @@
 			files = (
 				EBCD24261D244F210007923F /* ArbitraryDeveloper.swift in Sources */,
 				EBCD242E1D24579D0007923F /* MockSlack.swift in Sources */,
-				EBCD24241D24488C0007923F /* DeveloperSpec.swift in Sources */,
-				EBC26D301D2442B100838900 /* KarumiHQsSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
