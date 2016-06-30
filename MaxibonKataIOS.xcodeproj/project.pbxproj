@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1E0076DA71B6357DC7B49CE7 /* Pods_MaxibonKataIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26FA91912154A164DBF90453 /* Pods_MaxibonKataIOSTests.framework */; };
+		BC9F3DB3D6BA81F0D12BB06B /* Pods_MaxibonKataIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2544E92D89A2293E5C76FC0F /* Pods_MaxibonKataIOS.framework */; };
+		EBC26D0B1D24415F00838900 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC26D0A1D24415F00838900 /* AppDelegate.swift */; };
+		EBC26D0D1D24415F00838900 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC26D0C1D24415F00838900 /* ViewController.swift */; };
+		EBC26D101D24415F00838900 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC26D0E1D24415F00838900 /* Main.storyboard */; };
+		EBC26D121D24415F00838900 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EBC26D111D24415F00838900 /* Assets.xcassets */; };
+		EBC26D151D24415F00838900 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBC26D131D24415F00838900 /* LaunchScreen.storyboard */; };
+		EBC26D2D1D24422A00838900 /* Developer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC26D2B1D24422A00838900 /* Developer.swift */; };
+		EBC26D2E1D24422A00838900 /* KarumiHQs.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC26D2C1D24422A00838900 /* KarumiHQs.swift */; };
+		EBC26D301D2442B100838900 /* KarumiHQsSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC26D2F1D2442B100838900 /* KarumiHQsSpec.swift */; };
+		EBCD24241D24488C0007923F /* DeveloperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCD24231D24488C0007923F /* DeveloperSpec.swift */; };
+		EBCD24261D244F210007923F /* ArbitraryDeveloper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCD24251D244F210007923F /* ArbitraryDeveloper.swift */; };
+		EBCD24291D2457380007923F /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCD24281D2457380007923F /* Chat.swift */; };
+		EBCD242B1D24575F0007923F /* Slack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCD242A1D24575F0007923F /* Slack.swift */; };
+		EBCD242E1D24579D0007923F /* MockSlack.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBCD242D1D24579D0007923F /* MockSlack.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EBC26D1C1D24415F00838900 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EBC26CFF1D24415F00838900 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EBC26D061D24415F00838900;
+			remoteInfo = MaxibonKataIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A56F408968C759E39C50989 /* Pods-MaxibonKataIOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaxibonKataIOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaxibonKataIOS/Pods-MaxibonKataIOS.debug.xcconfig"; sourceTree = "<group>"; };
+		2544E92D89A2293E5C76FC0F /* Pods_MaxibonKataIOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaxibonKataIOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26FA91912154A164DBF90453 /* Pods_MaxibonKataIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MaxibonKataIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8672D19BF26C279DBF51A859 /* Pods-MaxibonKataIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaxibonKataIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MaxibonKataIOSTests/Pods-MaxibonKataIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E8BFEA222C6BA5A65940E65E /* Pods-MaxibonKataIOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaxibonKataIOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaxibonKataIOS/Pods-MaxibonKataIOS.release.xcconfig"; sourceTree = "<group>"; };
+		EBC26D071D24415F00838900 /* MaxibonKataIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaxibonKataIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBC26D0A1D24415F00838900 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EBC26D0C1D24415F00838900 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EBC26D0F1D24415F00838900 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EBC26D111D24415F00838900 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EBC26D141D24415F00838900 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EBC26D161D24415F00838900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBC26D1B1D24415F00838900 /* MaxibonKataIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaxibonKataIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBC26D211D24415F00838900 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBC26D2B1D24422A00838900 /* Developer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Developer.swift; sourceTree = "<group>"; };
+		EBC26D2C1D24422A00838900 /* KarumiHQs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarumiHQs.swift; sourceTree = "<group>"; };
+		EBC26D2F1D2442B100838900 /* KarumiHQsSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KarumiHQsSpec.swift; sourceTree = "<group>"; };
+		EBCD24231D24488C0007923F /* DeveloperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeveloperSpec.swift; sourceTree = "<group>"; };
+		EBCD24251D244F210007923F /* ArbitraryDeveloper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArbitraryDeveloper.swift; sourceTree = "<group>"; };
+		EBCD24281D2457380007923F /* Chat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		EBCD242A1D24575F0007923F /* Slack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Slack.swift; sourceTree = "<group>"; };
+		EBCD242D1D24579D0007923F /* MockSlack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSlack.swift; sourceTree = "<group>"; };
+		FC8926FF8C641D2683EB9533 /* Pods-MaxibonKataIOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MaxibonKataIOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MaxibonKataIOSTests/Pods-MaxibonKataIOSTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EBC26D041D24415F00838900 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC9F3DB3D6BA81F0D12BB06B /* Pods_MaxibonKataIOS.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBC26D181D24415F00838900 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E0076DA71B6357DC7B49CE7 /* Pods_MaxibonKataIOSTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA79446767C536A4081E6891 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2544E92D89A2293E5C76FC0F /* Pods_MaxibonKataIOS.framework */,
+				26FA91912154A164DBF90453 /* Pods_MaxibonKataIOSTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CB031D118C2710DF51537DDB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A56F408968C759E39C50989 /* Pods-MaxibonKataIOS.debug.xcconfig */,
+				E8BFEA222C6BA5A65940E65E /* Pods-MaxibonKataIOS.release.xcconfig */,
+				8672D19BF26C279DBF51A859 /* Pods-MaxibonKataIOSTests.debug.xcconfig */,
+				FC8926FF8C641D2683EB9533 /* Pods-MaxibonKataIOSTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EBC26CFE1D24415F00838900 = {
+			isa = PBXGroup;
+			children = (
+				EBC26D091D24415F00838900 /* MaxibonKataIOS */,
+				EBC26D1E1D24415F00838900 /* MaxibonKataIOSTests */,
+				EBC26D081D24415F00838900 /* Products */,
+				CB031D118C2710DF51537DDB /* Pods */,
+				AA79446767C536A4081E6891 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EBC26D081D24415F00838900 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EBC26D071D24415F00838900 /* MaxibonKataIOS.app */,
+				EBC26D1B1D24415F00838900 /* MaxibonKataIOSTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBC26D091D24415F00838900 /* MaxibonKataIOS */ = {
+			isa = PBXGroup;
+			children = (
+				EBC26D2A1D2441F800838900 /* Domain */,
+				EBC26D0A1D24415F00838900 /* AppDelegate.swift */,
+				EBC26D0C1D24415F00838900 /* ViewController.swift */,
+				EBC26D0E1D24415F00838900 /* Main.storyboard */,
+				EBC26D111D24415F00838900 /* Assets.xcassets */,
+				EBC26D131D24415F00838900 /* LaunchScreen.storyboard */,
+				EBC26D161D24415F00838900 /* Info.plist */,
+			);
+			path = MaxibonKataIOS;
+			sourceTree = "<group>";
+		};
+		EBC26D1E1D24415F00838900 /* MaxibonKataIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				EBC26D2F1D2442B100838900 /* KarumiHQsSpec.swift */,
+				EBCD24231D24488C0007923F /* DeveloperSpec.swift */,
+				EBCD242C1D24578C0007923F /* Test Doubles */,
+				EBC26D311D24446700838900 /* Generators */,
+				EBC26D211D24415F00838900 /* Info.plist */,
+			);
+			path = MaxibonKataIOSTests;
+			sourceTree = "<group>";
+		};
+		EBC26D2A1D2441F800838900 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				EBCD24271D2457310007923F /* Chat */,
+				EBC26D2B1D24422A00838900 /* Developer.swift */,
+				EBC26D2C1D24422A00838900 /* KarumiHQs.swift */,
+			);
+			name = Domain;
+			sourceTree = "<group>";
+		};
+		EBC26D311D24446700838900 /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				EBCD24251D244F210007923F /* ArbitraryDeveloper.swift */,
+			);
+			name = Generators;
+			sourceTree = "<group>";
+		};
+		EBCD24271D2457310007923F /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				EBCD24281D2457380007923F /* Chat.swift */,
+				EBCD242A1D24575F0007923F /* Slack.swift */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		EBCD242C1D24578C0007923F /* Test Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				EBCD242D1D24579D0007923F /* MockSlack.swift */,
+			);
+			name = "Test Doubles";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EBC26D061D24415F00838900 /* MaxibonKataIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBC26D241D24415F00838900 /* Build configuration list for PBXNativeTarget "MaxibonKataIOS" */;
+			buildPhases = (
+				8D76766D3480C9CBDAD53E70 /* [CP] Check Pods Manifest.lock */,
+				EBC26D031D24415F00838900 /* Sources */,
+				EBC26D041D24415F00838900 /* Frameworks */,
+				EBC26D051D24415F00838900 /* Resources */,
+				65518BCD0FBE0D05420711CE /* [CP] Embed Pods Frameworks */,
+				4F621FE3B9AA3128D3A045F2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MaxibonKataIOS;
+			productName = MaxibonKataIOS;
+			productReference = EBC26D071D24415F00838900 /* MaxibonKataIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EBC26D1A1D24415F00838900 /* MaxibonKataIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EBC26D271D24415F00838900 /* Build configuration list for PBXNativeTarget "MaxibonKataIOSTests" */;
+			buildPhases = (
+				72B58BCE015F586740714F37 /* [CP] Check Pods Manifest.lock */,
+				EBC26D171D24415F00838900 /* Sources */,
+				EBC26D181D24415F00838900 /* Frameworks */,
+				EBC26D191D24415F00838900 /* Resources */,
+				D67EAF26AEB387FFF8CEB96F /* [CP] Embed Pods Frameworks */,
+				67A073E94B38D55355535BE2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EBC26D1D1D24415F00838900 /* PBXTargetDependency */,
+			);
+			name = MaxibonKataIOSTests;
+			productName = MaxibonKataIOSTests;
+			productReference = EBC26D1B1D24415F00838900 /* MaxibonKataIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EBC26CFF1D24415F00838900 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = GoKarumi;
+				TargetAttributes = {
+					EBC26D061D24415F00838900 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					EBC26D1A1D24415F00838900 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = EBC26D061D24415F00838900;
+					};
+				};
+			};
+			buildConfigurationList = EBC26D021D24415F00838900 /* Build configuration list for PBXProject "MaxibonKataIOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EBC26CFE1D24415F00838900;
+			productRefGroup = EBC26D081D24415F00838900 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EBC26D061D24415F00838900 /* MaxibonKataIOS */,
+				EBC26D1A1D24415F00838900 /* MaxibonKataIOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EBC26D051D24415F00838900 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC26D151D24415F00838900 /* LaunchScreen.storyboard in Resources */,
+				EBC26D121D24415F00838900 /* Assets.xcassets in Resources */,
+				EBC26D101D24415F00838900 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBC26D191D24415F00838900 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4F621FE3B9AA3128D3A045F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaxibonKataIOS/Pods-MaxibonKataIOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		65518BCD0FBE0D05420711CE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaxibonKataIOS/Pods-MaxibonKataIOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67A073E94B38D55355535BE2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaxibonKataIOSTests/Pods-MaxibonKataIOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72B58BCE015F586740714F37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8D76766D3480C9CBDAD53E70 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D67EAF26AEB387FFF8CEB96F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaxibonKataIOSTests/Pods-MaxibonKataIOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EBC26D031D24415F00838900 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBC26D2D1D24422A00838900 /* Developer.swift in Sources */,
+				EBC26D0D1D24415F00838900 /* ViewController.swift in Sources */,
+				EBCD24291D2457380007923F /* Chat.swift in Sources */,
+				EBC26D0B1D24415F00838900 /* AppDelegate.swift in Sources */,
+				EBCD242B1D24575F0007923F /* Slack.swift in Sources */,
+				EBC26D2E1D24422A00838900 /* KarumiHQs.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EBC26D171D24415F00838900 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBCD24261D244F210007923F /* ArbitraryDeveloper.swift in Sources */,
+				EBCD242E1D24579D0007923F /* MockSlack.swift in Sources */,
+				EBCD24241D24488C0007923F /* DeveloperSpec.swift in Sources */,
+				EBC26D301D2442B100838900 /* KarumiHQsSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EBC26D1D1D24415F00838900 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EBC26D061D24415F00838900 /* MaxibonKataIOS */;
+			targetProxy = EBC26D1C1D24415F00838900 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EBC26D0E1D24415F00838900 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBC26D0F1D24415F00838900 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EBC26D131D24415F00838900 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EBC26D141D24415F00838900 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EBC26D221D24415F00838900 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EBC26D231D24415F00838900 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EBC26D251D24415F00838900 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A56F408968C759E39C50989 /* Pods-MaxibonKataIOS.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MaxibonKataIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.karumi.MaxibonKataIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EBC26D261D24415F00838900 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8BFEA222C6BA5A65940E65E /* Pods-MaxibonKataIOS.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MaxibonKataIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.karumi.MaxibonKataIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EBC26D281D24415F00838900 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8672D19BF26C279DBF51A859 /* Pods-MaxibonKataIOSTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MaxibonKataIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.karumi.MaxibonKataIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MaxibonKataIOS.app/MaxibonKataIOS";
+			};
+			name = Debug;
+		};
+		EBC26D291D24415F00838900 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC8926FF8C641D2683EB9533 /* Pods-MaxibonKataIOSTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MaxibonKataIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.karumi.MaxibonKataIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MaxibonKataIOS.app/MaxibonKataIOS";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EBC26D021D24415F00838900 /* Build configuration list for PBXProject "MaxibonKataIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBC26D221D24415F00838900 /* Debug */,
+				EBC26D231D24415F00838900 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBC26D241D24415F00838900 /* Build configuration list for PBXNativeTarget "MaxibonKataIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBC26D251D24415F00838900 /* Debug */,
+				EBC26D261D24415F00838900 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EBC26D271D24415F00838900 /* Build configuration list for PBXNativeTarget "MaxibonKataIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBC26D281D24415F00838900 /* Debug */,
+				EBC26D291D24415F00838900 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EBC26CFF1D24415F00838900 /* Project object */;
+}
