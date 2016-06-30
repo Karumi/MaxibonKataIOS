@@ -22,10 +22,10 @@ public struct Developer {
 
 public class Karumies {
 
-    public static let Pedro = Developer(name: "Pedro", numberOfMaxibonsToGet: 2)
-    public static let Davide = Developer(name: "Davide", numberOfMaxibonsToGet: 2)
-    public static let Alberto = Developer(name: "Alberto", numberOfMaxibonsToGet: 2)
+    public static let Pedro = Developer(name: "Pedro", numberOfMaxibonsToGet: 3)
+    public static let Davide = Developer(name: "Davide", numberOfMaxibonsToGet: 0)
+    public static let Alberto = Developer(name: "Alberto", numberOfMaxibonsToGet: 1)
     public static let Jorge = Developer(name: "Jorge", numberOfMaxibonsToGet: 2)
-    public static let Sergio = Developer(name: "Sergio", numberOfMaxibonsToGet: 2)
+    public static let Sergio = Developer(name: "Sergio", numberOfMaxibonsToGet: 1)
 
 }

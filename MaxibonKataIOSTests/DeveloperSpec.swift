@@ -16,6 +16,14 @@ class DeveloperSpec: XCTestCase {
     private let anyName = "Pedro"
     private let anyNumberOfMaxibonsToGet = 11
 
+    func testTheNumberOfMaxibonsPerKarumieAre() {
+        XCTAssertEqual(3, Karumies.Pedro.numberOfMaxibonsToGet)
+        XCTAssertEqual(0, Karumies.Davide.numberOfMaxibonsToGet)
+        XCTAssertEqual(1, Karumies.Alberto.numberOfMaxibonsToGet)
+        XCTAssertEqual(2, Karumies.Jorge.numberOfMaxibonsToGet)
+        XCTAssertEqual(1, Karumies.Sergio.numberOfMaxibonsToGet)
+    }
+
     func testAll() {
         property("Number of maxibons to consume can not be negative") <- forAll { (developer: Developer) in
             return developer.numberOfMaxibonsToGet >= 0
