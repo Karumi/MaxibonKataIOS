@@ -1,5 +1,5 @@
 //
-//  ConsoleSlack.swift
+//  Chat.swift
 //  MaxibonKataIOS
 //
 //  Created by Pedro Vicente Gomez on 29/06/16.
@@ -8,11 +8,8 @@
 
 import Foundation
 
-struct ConsoleSlack: Slack {
+public protocol Chat {
 
-    func sendMessage(message: String) {
-        print("-------->" + message)
-    }
-
+    func sendMessage(message: String)
 
 }

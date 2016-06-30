@@ -1,5 +1,5 @@
 //
-//  MockSlack.swift
+//  MockChat.swift
 //  MaxibonKataIOS
 //
 //  Created by Pedro Vicente Gomez on 29/06/16.
@@ -9,7 +9,8 @@
 import Foundation
 @testable import MaxibonKataIOS
 
-class MockSlack: Slack {
+class MockChat
+: Chat {
 
     var messageSent: String? = nil
 

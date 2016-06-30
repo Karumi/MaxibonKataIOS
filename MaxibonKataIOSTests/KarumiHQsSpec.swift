@@ -36,17 +36,17 @@ class KarumiHQsSpec: XCTestCase {
                 }
         }
 
-        let slack = MockSlack()
-        let karumiHQsGenerator = KarumiHQs.create(slack)
+        let chat = MockChat()
+        let karumiHQsGenerator = KarumiHQs.create(chat)
         let developerGenerator = Developer.arbitrary
 
-        property("If there are two or less maxibons after opening the fridge the developer sends a message to by more")
+        property("If there are two or less maxibons after opening the fridge the developer sends a message to buy more")
             <- forAll(karumiHQsGenerator, developerGenerator) { (karumiHQs: KarumiHQs, developer: Developer) in
                 let initialMaxibons = karumiHQs.maxibonsLeft
                 return initialMaxibons - developer.numberOfMaxibonsToGet <= 2 ==> {
                     karumiHQs.openFridge(developer)
-                    let expectedResult = slack.messageSent == "Hi guys, I'm \(developer). We need more maxibons!"
-                    slack.messageSent = nil
+                    let expectedResult = chat.messageSent == "Hi guys, I'm \(developer). We need more maxibons!"
+                    chat.messageSent = nil
                     return expectedResult
                 }
         }
@@ -56,8 +56,8 @@ class KarumiHQsSpec: XCTestCase {
                 let initialMaxibons = karumiHQs.maxibonsLeft
                 return initialMaxibons - developer.numberOfMaxibonsToGet > 2 ==> {
                     karumiHQs.openFridge(developer)
-                    let expectedResult = slack.messageSent == nil
-                    slack.messageSent = nil
+                    let expectedResult = chat.messageSent == nil
+                    chat.messageSent = nil
                     return expectedResult
                 }
         }

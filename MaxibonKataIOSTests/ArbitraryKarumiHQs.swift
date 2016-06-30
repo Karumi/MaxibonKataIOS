@@ -12,12 +12,12 @@ import SwiftCheck
 
 extension KarumiHQs: Arbitrary {
 
-    public static func create(slack: Slack) -> Gen<KarumiHQs> {
-        return Gen<KarumiHQs>.pure(KarumiHQs(slack: slack))
+    public static func create(chat: Chat) -> Gen<KarumiHQs> {
+        return Gen<KarumiHQs>.pure(KarumiHQs(chat: chat))
     }
 
     public static var arbitrary: Gen<KarumiHQs> {
-        return create(MockSlack())
+        return create(MockChat())
     }
 
 }

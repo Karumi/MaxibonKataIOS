@@ -11,5 +11,5 @@ before_install:
 
 script:
   - swiftlint
-  - set -o pipefail && xcodebuild -workspace iOSBasicTraining.xcworkspace -scheme 'iOSBasicTraining' -destination 'platform=iOS Simulator,name=iPhone 6s Plus' build test CODE_SIGN_IDENTITY=- | xcpretty -c
+  - set -o pipefail && xcodebuild -workspace MaxibonKataIOS.xcworkspace -scheme 'MaxibonKataIOS' -destination 'platform=iOS Simulator,name=iPhone 6s Plus' build test CODE_SIGN_IDENTITY=- | xcpretty -c
 

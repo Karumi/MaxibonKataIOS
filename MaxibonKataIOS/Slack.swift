@@ -8,8 +8,11 @@
 
 import Foundation
 
-public protocol Slack {
+struct Slack: Chat {
 
-    func sendMessage(message: String)
+    func sendMessage(message: String) {
+        print("-------->" + message)
+    }
+
 
 }

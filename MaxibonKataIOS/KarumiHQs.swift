@@ -10,7 +10,7 @@ import Foundation
 
 public final class KarumiHQs {
 
-    private let slack: Slack
+    private let chat: Chat
 
     var maxibonsLeft: Int
 
@@ -18,13 +18,13 @@ public final class KarumiHQs {
         return maxibonsLeft <= 2
     }
 
-    public init(slack: Slack) {
+    public init(chat: Chat) {
         self.maxibonsLeft = 10
-        self.slack = slack
+        self.chat = chat
     }
 
     public convenience init() {
-        self.init(slack: ConsoleSlack())
+        self.init(chat: Slack())
     }
 
     public func openFridge(developer: Developer) {
@@ -37,7 +37,7 @@ public final class KarumiHQs {
 
     private func notifyWeShouldByMaxibons(developer: Developer) {
         let message = "Hi guys, I'm \(developer). We need more maxibons!"
-        slack.sendMessage(message)
+        chat.sendMessage(message)
     }
 
     private func buyMoreMaxibons() {
