@@ -13,8 +13,8 @@ import SwiftCheck
 
 class DeveloperSpec: XCTestCase {
 
-    private let anyName = "Pedro"
-    private let anyNumberOfMaxibonsToGet = 11
+    fileprivate let anyName = "Pedro"
+    fileprivate let anyNumberOfMaxibonsToGet = 11
 
     func testTheNumberOfMaxibonsPerKarumieAre() {
         XCTAssertEqual(3, Karumies.Pedro.numberOfMaxibonsToGet)
