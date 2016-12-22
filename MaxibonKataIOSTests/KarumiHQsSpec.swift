@@ -76,7 +76,7 @@ class KarumiHQsSpec: XCTestCase {
 
     }
 
-    private func calculateMaxibonsLeft(initialMaxibons: Int, developers: [Developer]) -> Int {
+    fileprivate func calculateMaxibonsLeft(_ initialMaxibons: Int, developers: [Developer]) -> Int {
         var maxibonsLeft = initialMaxibons
         developers.forEach { developer in
             maxibonsLeft -= developer.numberOfMaxibonsToGet
@@ -90,7 +90,7 @@ class KarumiHQsSpec: XCTestCase {
         return maxibonsLeft
     }
 
-    private func maxibonsAfterOpeningTheFridge(initialMaxibons: Int, _ maxibonsToGet: Int) -> Int {
+    fileprivate func maxibonsAfterOpeningTheFridge(_ initialMaxibons: Int, _ maxibonsToGet: Int) -> Int {
         var expectedMaxibons = initialMaxibons - maxibonsToGet
         if expectedMaxibons < 0 {
             expectedMaxibons = 0
