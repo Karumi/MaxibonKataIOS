@@ -10,6 +10,6 @@ import Foundation
 
 public protocol Chat {
 
-    func sendMessage(_ message: String)
+    func send(message: String)
 
 }

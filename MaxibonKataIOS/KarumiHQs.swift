@@ -43,7 +43,7 @@ public final class KarumiHQs {
 
     fileprivate func notifyWeShouldBuyMaxibons(_ developer: Developer) {
         let message = "Hi guys, I'm \(developer). We need more maxibons!"
-        chat.sendMessage(message)
+        chat.send(message: message)
     }
 
     fileprivate func buyMoreMaxibons() {

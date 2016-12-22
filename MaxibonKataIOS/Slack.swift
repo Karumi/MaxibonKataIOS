@@ -10,7 +10,7 @@ import Foundation
 
 struct Slack: Chat {
 
-    func sendMessage(_ message: String) {
+    func send(message: String) {
         print("-------->" + message)
     }
 

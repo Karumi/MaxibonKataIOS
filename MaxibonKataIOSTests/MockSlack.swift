@@ -13,7 +13,7 @@ class MockChat: Chat {
 
     var messageSent: String? = nil
 
-    func sendMessage(_ message: String) {
+    func send(message: String) {
         messageSent = message
     }
 }
