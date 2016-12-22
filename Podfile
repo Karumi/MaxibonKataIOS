@@ -3,7 +3,7 @@ target 'MaxibonKataIOS' do
 
   target 'MaxibonKataIOSTests' do
     inherit! :search_paths
-    pod 'SwiftCheck', :git => 'git@github.com:typelift/SwiftCheck.git', :branch => 'master' 
+    pod 'SwiftCheck', '0.7.1'
   end
 
 end
