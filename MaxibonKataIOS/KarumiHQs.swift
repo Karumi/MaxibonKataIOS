@@ -10,11 +10,11 @@ import Foundation
 
 public final class KarumiHQs {
 
-    private let chat: Chat
+    fileprivate let chat: Chat
 
     var maxibonsLeft: Int
 
-    private var shouldBuyMoreMaxibons: Bool {
+    fileprivate var shouldBuyMoreMaxibons: Bool {
         return maxibonsLeft <= 2
     }
 
@@ -27,11 +27,11 @@ public final class KarumiHQs {
         self.init(chat: Slack())
     }
 
-    public func openFridge(developer: Developer) {
+    public func openFridge(_ developer: Developer) {
         openFridge([developer])
     }
 
-    public func openFridge(developers: [Developer]) {
+    public func openFridge(_ developers: [Developer]) {
         developers.forEach { developer in
             grabMaxibons(developer)
             if shouldBuyMoreMaxibons {
@@ -41,16 +41,16 @@ public final class KarumiHQs {
         }
     }
 
-    private func notifyWeShouldBuyMaxibons(developer: Developer) {
+    fileprivate func notifyWeShouldBuyMaxibons(_ developer: Developer) {
         let message = "Hi guys, I'm \(developer). We need more maxibons!"
-        chat.sendMessage(message)
+        chat.send(message: message)
     }
 
-    private func buyMoreMaxibons() {
+    fileprivate func buyMoreMaxibons() {
         maxibonsLeft += 10
     }
 
-    private func grabMaxibons(developer: Developer) {
+    fileprivate func grabMaxibons(_ developer: Developer) {
         maxibonsLeft -= developer.numberOfMaxibonsToGet
         if maxibonsLeft < 0 {
             maxibonsLeft = 0
