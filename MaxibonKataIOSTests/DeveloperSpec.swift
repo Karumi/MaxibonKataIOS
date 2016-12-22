@@ -22,6 +22,7 @@ class DeveloperSpec: XCTestCase {
         XCTAssertEqual(1, Karumies.Alberto.numberOfMaxibonsToGet)
         XCTAssertEqual(2, Karumies.Jorge.numberOfMaxibonsToGet)
         XCTAssertEqual(1, Karumies.Sergio.numberOfMaxibonsToGet)
+        XCTAssertEqual(1, Karumies.Fran.numberOfMaxibonsToGet)
     }
 
     func testAll() {

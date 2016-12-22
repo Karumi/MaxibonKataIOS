@@ -19,6 +19,7 @@ extension Developer: Arbitrary {
             Gen<Developer>.pure(Karumies.Jorge),
             Gen<Developer>.pure(Karumies.Davide),
             Gen<Developer>.pure(Karumies.Sergio),
+            Gen<Developer>.pure(Karumies.Fran),
             ])
     }
 

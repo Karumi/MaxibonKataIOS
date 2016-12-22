@@ -27,5 +27,6 @@ open class Karumies {
     open static let Alberto = Developer(name: "Alberto", numberOfMaxibonsToGet: 1)
     open static let Jorge = Developer(name: "Jorge", numberOfMaxibonsToGet: 2)
     open static let Sergio = Developer(name: "Sergio", numberOfMaxibonsToGet: 1)
+    open static let Fran = Developer(name: "Fran", numberOfMaxibonsToGet: 1)
 
 }

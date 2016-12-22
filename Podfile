@@ -3,7 +3,7 @@ target 'MaxibonKataIOS' do
 
   target 'MaxibonKataIOSTests' do
     inherit! :search_paths
-    pod 'SwiftCheck', '0.7.1'
+    pod 'SwiftCheck'
   end
 
 end
