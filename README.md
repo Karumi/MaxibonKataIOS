@@ -1,8 +1,8 @@
-![Karumi logo][karumilogo] Kata Maxibon for Swift.
+![Karumi logo][karumilogo] Kata Maxibon for Swift. [![Build Status](https://travis-ci.org/Karumi/MaxibonKataIOS.svg?branch=master)](https://travis-ci.org/Karumi/MaxibonKataIOS)
 ==================================================
 
 - We are here to practice [property based testing][property-based-testing].
-- We are going to use [SwitchCheck][swiftCheck] to write our tests.
+- We are going to use [SwiftCheck][swiftCheck] to write our tests.
 - We are going to practice pair programming.
 
 During this kata we will try to find how to use property based testing from different points of view:

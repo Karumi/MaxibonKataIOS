@@ -1,4 +1,3 @@
-
 target 'MaxibonKataIOS' do
   use_frameworks!
 
