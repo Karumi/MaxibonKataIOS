@@ -3,7 +3,7 @@ target 'MaxibonKataIOS' do
 
   target 'MaxibonKataIOSTests' do
     inherit! :search_paths
-    pod 'SwiftCheck'
+    pod 'SwiftCheck', :git => 'https://github.com/fjfdeztoro/SwiftCheck.git', :branch => 'fix-compilation-issues-xcode9'
   end
 
 end
