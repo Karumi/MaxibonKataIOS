@@ -13,7 +13,7 @@ import SwiftCheck
 extension Developer: Arbitrary {
 
     public static var arbitrary: Gen<Developer> {
-        return Gen<Developer>.oneOf([
+        return Gen<Developer>.one(of: [
             Gen<Developer>.pure(Karumies.Alberto),
             Gen<Developer>.pure(Karumies.Pedro),
             Gen<Developer>.pure(Karumies.Jorge),
@@ -24,14 +24,14 @@ extension Developer: Arbitrary {
     }
 
     public static var arbitraryHungry: Gen<Developer> {
-        return Gen<Int>.fromElementsIn(8...Int.max).map {
+        return Gen<Int>.fromElements(in: 8...Int.max).map {
             let name = String.arbitrary.generate
             return Developer(name: name, numberOfMaxibonsToGet: $0)
         }
     }
 
     public static var arbitraryNotSoHungry: Gen<Developer> {
-        return Gen<Int>.fromElementsIn(0...7).map {
+        return Gen<Int>.fromElements(in: 0...7).map {
             let name = String.arbitrary.generate
             return Developer(name: name, numberOfMaxibonsToGet: $0)
         }
