@@ -1,22 +1,22 @@
 PODS:
-  - SwiftCheck (0.8.0)
+  - SwiftCheck (0.8.1)
 
 DEPENDENCIES:
-  - SwiftCheck (from `https://github.com/fjfdeztoro/SwiftCheck.git`, branch `fix-compilation-issues-xcode9`)
+  - SwiftCheck (from `https://github.com/typelift/SwiftCheck.git`, commit `df82fb889864945c64458f38846702af729b3ee4`)
 
 EXTERNAL SOURCES:
   SwiftCheck:
-    :branch: fix-compilation-issues-xcode9
-    :git: https://github.com/fjfdeztoro/SwiftCheck.git
+    :commit: df82fb889864945c64458f38846702af729b3ee4
+    :git: https://github.com/typelift/SwiftCheck.git
 
 CHECKOUT OPTIONS:
   SwiftCheck:
-    :commit: 6285e6a542846144c3c49bd01fac4b696b28ce81
-    :git: https://github.com/fjfdeztoro/SwiftCheck.git
+    :commit: df82fb889864945c64458f38846702af729b3ee4
+    :git: https://github.com/typelift/SwiftCheck.git
 
 SPEC CHECKSUMS:
-  SwiftCheck: bb6e75408ca538f733b095a7196db6070ee1ed17
+  SwiftCheck: 6ab9c2382eda70eebcd3cca9ada74de19b2b4d0a
 
-PODFILE CHECKSUM: 72207557597aa93eacf3e98bb233013f50b1ae71
+PODFILE CHECKSUM: 9a7935e4b52e1c27594cc1e5e09a9a12c555eb33
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.5.0
