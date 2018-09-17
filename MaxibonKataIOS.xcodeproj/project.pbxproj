@@ -192,8 +192,6 @@
 				EBC26D031D24415F00838900 /* Sources */,
 				EBC26D041D24415F00838900 /* Frameworks */,
 				EBC26D051D24415F00838900 /* Resources */,
-				65518BCD0FBE0D05420711CE /* [CP] Embed Pods Frameworks */,
-				4F621FE3B9AA3128D3A045F2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,7 +211,6 @@
 				EBC26D181D24415F00838900 /* Frameworks */,
 				EBC26D191D24415F00838900 /* Resources */,
 				D67EAF26AEB387FFF8CEB96F /* [CP] Embed Pods Frameworks */,
-				67A073E94B38D55355535BE2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -286,51 +283,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		4F621FE3B9AA3128D3A045F2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaxibonKataIOS/Pods-MaxibonKataIOS-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		65518BCD0FBE0D05420711CE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaxibonKataIOS/Pods-MaxibonKataIOS-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		67A073E94B38D55355535BE2 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MaxibonKataIOSTests/Pods-MaxibonKataIOSTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		72B58BCE015F586740714F37 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
