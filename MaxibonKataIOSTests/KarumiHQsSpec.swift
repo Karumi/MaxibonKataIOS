@@ -58,17 +58,17 @@ class KarumiHQsSpec: XCTestCase {
         }
 
         property("If some Karumies go to the kitchen the number of maxibons left can't be lower than 2")
-            <- forAll { (developers: ArrayOf<Developer>) in
+            <- forAll { (developers: [Developer]) in
                 let karumiHQs = KarumiHQs()
-                karumiHQs.openFridge(developers.getArray)
+                karumiHQs.openFridge(developers)
                 return karumiHQs.maxibonsLeft > 2
         }
 
         property("If some Karumies go to the kitchen the number of maxibons left has to be correct")
-            <- forAll { (developers: ArrayOf<Developer>) in
+            <- forAll { (developers: [Developer]) in
                 let karumiHQs = KarumiHQs()
                 let initialMaxibons = karumiHQs.maxibonsLeft
-                let karumies = developers.getArray
+                let karumies = developers
                 karumiHQs.openFridge(karumies)
                 let expectedMaxibons = self.calculateMaxibonsLeft(initialMaxibons, developers: karumies)
                 return karumiHQs.maxibonsLeft == expectedMaxibons

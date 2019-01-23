@@ -1,22 +1,16 @@
 PODS:
-  - SwiftCheck (0.8.1)
+  - SwiftCheck (0.11.0)
 
 DEPENDENCIES:
-  - SwiftCheck (from `https://github.com/typelift/SwiftCheck.git`, commit `df82fb889864945c64458f38846702af729b3ee4`)
+  - SwiftCheck (~> 0.11.0)
 
-EXTERNAL SOURCES:
-  SwiftCheck:
-    :commit: df82fb889864945c64458f38846702af729b3ee4
-    :git: https://github.com/typelift/SwiftCheck.git
-
-CHECKOUT OPTIONS:
-  SwiftCheck:
-    :commit: df82fb889864945c64458f38846702af729b3ee4
-    :git: https://github.com/typelift/SwiftCheck.git
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftCheck
 
 SPEC CHECKSUMS:
-  SwiftCheck: 6ab9c2382eda70eebcd3cca9ada74de19b2b4d0a
+  SwiftCheck: 2d74c3182b31944f7a6cd332aea217c6db38dbba
 
-PODFILE CHECKSUM: f6f9c268d276716345e4112d0b98c9c0f071630b
+PODFILE CHECKSUM: 75a5959ecac946b0381ec09e2a55264e395906e5
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3

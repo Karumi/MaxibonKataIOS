@@ -14,12 +14,12 @@ extension Developer: Arbitrary {
 
     public static var arbitrary: Gen<Developer> {
         return Gen<Developer>.one(of: [
-            Gen<Developer>.pure(Karumies.Alberto),
+            Gen<Developer>.pure(Karumies.Toni),
             Gen<Developer>.pure(Karumies.Pedro),
             Gen<Developer>.pure(Karumies.Jorge),
             Gen<Developer>.pure(Karumies.Davide),
             Gen<Developer>.pure(Karumies.Sergio),
-            Gen<Developer>.pure(Karumies.Fran),
+            Gen<Developer>.pure(Karumies.Fran)
             ])
     }
 
