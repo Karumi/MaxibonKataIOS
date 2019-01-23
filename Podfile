@@ -1,9 +1,11 @@
+platform :ios, '12.0'
+
 target 'MaxibonKataIOS' do
   use_frameworks!
 
   target 'MaxibonKataIOSTests' do
     inherit! :search_paths
-    pod 'SwiftCheck', :git => 'https://github.com/typelift/SwiftCheck.git', :commit => 'df82fb889864945c64458f38846702af729b3ee4'
+    pod 'SwiftCheck', '~> 0.11.0'
   end
 
 end
