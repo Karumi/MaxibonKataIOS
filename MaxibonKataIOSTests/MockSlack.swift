@@ -11,7 +11,7 @@ import Foundation
 
 class MockChat: Chat {
 
-    var messageSent: String? = nil
+    var messageSent: String?
 
     func send(message: String) {
         messageSent = message
