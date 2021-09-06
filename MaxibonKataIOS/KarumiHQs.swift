@@ -1,20 +1,12 @@
-//
-//  KarumiHQs.swift
-//  MaxibonKata
-//
-//  Created by Pedro Vicente Gomez on 29/06/16.
-//  Copyright © 2016 GoKarumi. All rights reserved.
-//
-
 import Foundation
 
 public final class KarumiHQs {
 
-    fileprivate let chat: Chat
+    private let chat: Chat
 
     var maxibonsLeft: Int
 
-    fileprivate var shouldBuyMoreMaxibons: Bool {
+    private var shouldBuyMoreMaxibons: Bool {
         return maxibonsLeft <= 2
     }
 
@@ -41,16 +33,16 @@ public final class KarumiHQs {
         }
     }
 
-    fileprivate func notifyWeShouldBuyMaxibons(_ developer: Developer) {
+    private func notifyWeShouldBuyMaxibons(_ developer: Developer) {
         let message = "Hi guys, I'm \(developer). We need more maxibons!"
         chat.send(message: message)
     }
 
-    fileprivate func buyMoreMaxibons() {
+    private func buyMoreMaxibons() {
         maxibonsLeft += 10
     }
 
-    fileprivate func grabMaxibons(_ developer: Developer) {
+    private func grabMaxibons(_ developer: Developer) {
         maxibonsLeft -= developer.numberOfMaxibonsToGet
         if maxibonsLeft < 0 {
             maxibonsLeft = 0
